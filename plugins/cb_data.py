@@ -121,7 +121,7 @@ async def doc(bot,update):
      file_path = f"downloads/{new_filename}"
      message = update.message.reply_to_message
      file = message.document or message.video or message.audio
-     ms = await update.message.edit("**Download...**")
+     ms = await update.message.edit("**Downloading...**")
      used_limit(update.from_user.id,file.file_size)
      c_time = time.time()
      total_used = used + int(file.file_size)
@@ -187,7 +187,7 @@ async def doc(bot,update):
              except:
                  return
      else:
-     		await ms.edit("```Trying To Upload```")
+     		await ms.edit("**Uploading...**")
      		c_time = time.time()
      		try:
      			await bot.send_document(update.from_user.id,document = file_path,thumb=ph_path,caption = caption,progress=progress_for_pyrogram,progress_args=( "**Uploading: **", ms, c_time   ))			
@@ -213,7 +213,7 @@ async def vid(bot,update):
      file_path = f"downloads/{new_filename}"
      message = update.message.reply_to_message
      file = message.document or message.video or message.audio
-     ms = await update.message.edit("**Download...**")
+     ms = await update.message.edit("**Downloading...**")
      used_limit(update.from_user.id,file.file_size)
      c_time = time.time()
      total_used = used + int(file.file_size)
