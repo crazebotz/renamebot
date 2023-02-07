@@ -4,11 +4,11 @@ import os
 
 from plugins.cb_data import app as Client2
 
-TOKEN = os.environ.get("TOKEN", "5610432235:AAHrrWIMkZkRucxcC8Xlicda43PtM8zhY_c")
+TOKEN = os.environ.get("TOKEN", " ")
 
-API_ID = int(os.environ.get("API_ID", "15004995"))
+API_ID = int(os.environ.get("API_ID", "123456"))
 
-API_HASH = os.environ.get("API_HASH", "0209b6aa79a68ac5a101c9aeac18e8dd")
+API_HASH = os.environ.get("API_HASH", " ")
 
 STRING = os.environ.get("STRING", "")
 
@@ -17,11 +17,11 @@ bot = Client(
 
            "Renamer",
 
-           bot_token="5610432235:AAHrrWIMkZkRucxcC8Xlicda43PtM8zhY_c",
+           bot_token=TOKEN,
 
-           api_id=15004995,
+           api_id=API_ID,
 
-           api_hash="0209b6aa79a68ac5a101c9aeac18e8dd",
+           api_hash=API_HASH,
 
            plugins=dict(root='plugins'))
            
